@@ -25,7 +25,7 @@ public class UsrMemberController {
       members.add(new Member(id, "user" + id, "user" + id));
     }
   }
-
+//이 위로는 저장소
   public void actionJoin(Rq rq) {
     System.out.println("- 회원 가입 -");
     System.out.printf("로그인아이디 : ");

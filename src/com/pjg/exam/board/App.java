@@ -26,8 +26,9 @@ public class App {
       } else if (rq.getUrlPath().equals("/usr/member/join")) {
         Container.usrMemberController.actionJoin(rq);
       } else if (rq.getUrlPath().equals("/usr/book/write")){
-        Container.usrBookController.book(rq);
-      }
+        Container.usrBookController.bookActionWrite(rq);
+      } else if(rq.getUrlPath().equals("/usr/book/list"))
+        Container.usrBookController.bookActionList(rq);
       else {
         System.out.printf("입력된 명령어 : %s\n", cmd);
       }

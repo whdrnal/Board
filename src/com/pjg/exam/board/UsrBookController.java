@@ -28,7 +28,7 @@ public class UsrBookController {
   }
 
   //이 위로는 저장소
-  public void book(Rq rq) {
+  public void bookActionWrite(Rq rq) {
     System.out.println("- 책생성 -");
     System.out.printf("책이름: ");
     String bookName = Container.sc.nextLine();
@@ -43,6 +43,12 @@ public class UsrBookController {
     Book book = new Book(id, bookName, bookAddress);
     books.add(book);
     }
+
+  public void bookActionList(Rq rq) {
+
+    makeTestData();
+    System.out.println("나와랏");
+  }
 }
 
 

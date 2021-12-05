@@ -2,7 +2,7 @@ package com.pjg.exam.board;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+
 
 public class UsrArticleController {
   private int articlesLastId;
@@ -94,7 +94,6 @@ public class UsrArticleController {
     if (orderByIdDesc) {
       sortedArticles = Util.reverseList(sortedArticles);
     }
-
     for (Article article : sortedArticles) {
       System.out.printf("%d / %s\n", article.id, article.title);
     }

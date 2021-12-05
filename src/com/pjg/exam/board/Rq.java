@@ -3,8 +3,8 @@ package com.pjg.exam.board;
 import java.util.Map;
 
 //Rq데이터 저장소 현재 url 과 param = ( key , value )
-public
-class Rq {
+
+public class Rq {
   private String url;
   private String urlPath;
   private Map<String, String> params;
@@ -18,12 +18,30 @@ class Rq {
     params = Util.getParamsFromUrl(this.url);
   }
 
-  // 수정가능, if문 금지
   public Map<String, String> getParams() {
     return params;
   }
 
-  // 수정가능, if문 금지
+  public String getParam(String paramName, String defaultValue) {
+    if ( params.containsKey(paramName) == false ) {
+      return defaultValue;
+    }
+
+    return params.get(paramName);
+  }
+
+  public int getIntParam(String paramName, int defaultValue) {
+    if ( params.containsKey(paramName) == false ) {
+      return defaultValue;
+    }
+
+    try {
+      return Integer.parseInt(params.get(paramName));
+    }
+    catch ( NumberFormatException e ) {
+      return defaultValue;
+    }
+  }
 
   public String getUrlPath() {
     return urlPath;

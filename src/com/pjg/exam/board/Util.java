@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//Util이 Rq에게 url 과 (key,value) 을 Rq에게 보내고 저장
 public class Util {
   // 이 함수는 원본리스트를 훼손하지 않고, 새 리스트를 만듭니다. 즉 정렬이 반대인 복사본리스트를 만들어서 반환합니다.
   public static <T> List<T> reverseList(List<T> list) {
